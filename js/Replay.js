@@ -43,7 +43,38 @@ var Replay = function(file, size) {
 		playerColor:   'varstr',
 		_4:            {type: 'byte', length: 0x08}, // 01 00 00 00 00 00 00 00
 		mapScript2:    'varstr',
-		_5:            {type: 'until', value: 0x11},
+		_5: function() {
+			// Heuristic to get around something I don't understand :-(
+			// This section still stumps me - it's variable length, but doesn't
+			// seem to follow the conventions of the rest of the file. Probably
+			// something incredibly stupid I'm going to kick myself for in
+			// retrospect. Examples:
+
+			//	3	3	5	2
+			//	0	0	0	0
+			//	1	1	1	1
+			//	2	2	0	0
+			//	3	3	2	3
+			//	2	5	2	1
+			//	15	1	1	1
+			//	20	3	15	3
+			//	1	9	2	1
+			//	0	10	2	2
+			//	2	15	4	3
+			//	0	1	4	3
+			//		2	0	11
+			//		-1
+			//		0
+
+			var unknown = 0
+
+			while (Math.abs(unknown) < 100000) {
+				unknown = this.getInt32()
+			}
+
+			// We've hit the start year, need to rewind
+			this.view.seek(this.view.tell() - 7)
+		},
 		startTurn:     'int32',
 		startYear:     'int32',
 		endTurn:       'int32',
