@@ -9,6 +9,10 @@ BinaryParser.prototype.parseItem = function(itemConfig, includeJunk) {
 		itemConfig = {type: itemConfig}
 	}
 
+	if (typeof itemConfig == 'function') {
+		(itemConfig.bind(this))()
+	}
+
 	switch (itemConfig.type) {
 		case 'byte':   return this.getBytes(itemConfig.length)
 		case 'str':    return this.getString(itemConfig.length)
