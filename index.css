@@ -1,0 +1,494 @@
+body {
+	width: 100%;
+	height: 100%;
+	background-color: black !important;
+	color: #ffffc8;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+*, *:focus, .bootstrap-select .dropdown-toggle:focus {
+	outline: none !important;
+	outline-color: initial !important;
+	outline-style: none !important;
+	outline-width: initial !important;
+}
+
+input[type=checkbox] {
+	-webkit-appearance: none;
+	width: 10px;
+	height: 10px;
+	background-image: url(img/checkbox-empty.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+input[type=checkbox]:checked {
+	background-image: url(img/checkbox-checked.png);
+}
+
+.bootstrap-select {
+	color: #FFFFC8 !important;
+	background: transparent !important;
+	outline: none !important;
+	box-shadow: none !important;
+	margin-left: 12px !important;
+	margin-top:   3px !important;
+}
+
+.bootstrap-select .dropdown-toggle {
+	color: #FFFFC8 !important;
+	background: transparent !important;
+	outline: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	outline-color: transparent !important;
+}
+
+.bootstrap-select .dropdown-menu.open {
+	color: #FFFFC8 !important;
+	background: black !important;
+	outline: none !important;
+	box-shadow: none !important;
+	border: 1px solid #A58B4C !important;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	top: 1px;
+	position: relative;
+	border-top-style: none !important;
+}
+
+.bootstrap-select .dropdown-menu.inner {
+	color: #FFFFC8 !important;
+	background: black !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.bootstrap-select span {
+	color: #FFFFC8 !important;
+	background: transparent !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.bootstrap-select a:hover,
+.bootstrap-select a:hover span {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0e5d54+0,35746c+100 */
+	background: #0e5d54 !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  #0e5d54 0%, #35746c 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #0e5d54 0%,#35746c 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #0e5d54 0%,#35746c 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e5d54', endColorstr='#35746c',GradientType=0 ) !important; /* IE6-9 */
+}
+
+.glyphicon.glyphicon-ok.check-mark {
+	background-image: url(img/checkbox-checked.png) !important;
+	width: 10px;
+	height: 10px;
+	background-size: cover !important;
+}
+
+.glyphicon.glyphicon-ok.check-mark:before {
+	content: "";
+}
+
+.page-header-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:  100%;
+	height: 37px;
+	background-image: url(./img/header.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	text-align: center;
+	font-size: 20px;
+}
+
+.main-container {
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	width:  calc(100% - 40px);
+	height: calc(100% - 50px - 35px); /* page header, legal */
+}
+
+.top-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:  100%;
+	height: 38px;
+}
+
+.top-left-corner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 38px;
+	height: 100%;
+	background-image: url(./img/border_top_corner.png);
+}
+
+.top-left {
+	position: absolute;
+	top: 0;
+	left: 38px;
+	width: 300px;
+	height: 100%;
+	background-image: url(./img/border_top_side.png);
+}
+
+.top-left-split {
+	position: absolute;
+	top: 0;
+	left: calc(38px + 300px);
+	width: 3px;
+	height: 100%;
+	background-image: url(./img/border_top_split.png);
+}
+
+.top-middle {
+	position: absolute;
+	top: 0;
+	left: calc(38px + 300px + 3px);
+	width: calc(100% - (38px + 300px + 3px + 5px + 279px + 38px));
+	height: 100%;
+	background-image: url(./img/border_top_middle.png);
+}
+
+.top-right-split {
+	position: absolute;
+	top: 0;
+	right: calc(38px + 279px);
+	width: 5px;
+	height: 100%;
+	background-image: url(./img/border_top_right_split.png);
+}
+
+.top-right {
+	position: absolute;
+	top: 0;
+	right: 38px;
+	width: 280px;
+	height: 100%;
+	background-image: url(./img/border_top_side.png);
+}
+
+.top-right-corner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 38px;
+	height: 100%;
+	background-image: url(./img/border_top_corner.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: center;
+}
+
+.border {
+	position: absolute;
+	top: 38px;
+	width: 11px;
+	height: calc(100% - 38px - 54px); /* top bar, bottom border */
+	background-image: url(./img/border_side.png);
+	background-repeat-x: no-repeat;
+	background-repeat-y: repeat;
+}
+
+.left-border {
+	left: 0;
+}
+
+.map-container {
+	position: absolute;
+	top: 38px;
+	left: 11px;
+	width:  calc(100% - 300px - 33px); /* side bar, borders */
+	height: calc(100% - 38px - 54px); /* top bar, bottom border */
+	/*background-color: red;*/
+	border-right: 1px solid #666;
+}
+
+.split-border {
+	right: calc(300px + 11px); /* side bar, right border */
+}
+
+.log-container {
+	position: absolute;
+	top: 38px;
+	right: 11px;
+	width:  300px;
+	height: calc(100% - 38px - 54px); /* top bar, bottom border */
+}
+
+.log-filter-container {
+	height: 30px;
+	width: 100%;
+	border-bottom: 1px solid #666;
+}
+
+.log-messages {
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.message {
+	padding: 0px 10px;
+	background-color: #f4f4f4;
+	background-color: black;
+	border-bottom: 2px solid #07201F;
+}
+
+.message:not(.active) {
+	color: #3D3D30;
+}
+
+.message.active:hover {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0e5d54+0,35746c+100 */
+	background: #0e5d54; /* Old browsers */
+	background: -moz-linear-gradient(top,  #0e5d54 0%, #35746c 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #0e5d54 0%,#35746c 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #0e5d54 0%,#35746c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e5d54', endColorstr='#35746c',GradientType=0 ); /* IE6-9 */
+}
+
+.message.hidden {
+	display: none;
+}
+
+.right-border {
+	right: 0;
+}
+
+.flipped {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.bottom-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width:  100%;
+	height: 54px;
+}
+
+.bottom-left-corner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 38px;
+	height: 100%;
+	background-image: url(./img/border_bottom_corner.png);
+}
+
+.bottom-left {
+	position: absolute;
+	top: 0;
+	left: 38px;
+	width: calc((100% - (38px * 2) - 292px) / 2);
+	height: 100%;
+	background-image: url(./img/border_bottom_side.png);
+}
+
+.bottom-middle {
+	position: absolute;
+	top: 0;
+	left: calc(38px + (100% - (38px * 2) - 292px) / 2);
+	width: 292px;
+	height: 100%;
+	background-image: url(./img/border_bottom_middle.png);
+}
+
+.bottom-right {
+	position: absolute;
+	top: 0;
+	right: 38px;
+	width: calc((100% - (38px * 2) - 292px) / 2);
+	height: 100%;
+	background-image: url(./img/border_bottom_side.png);
+}
+
+.bottom-right-corner {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 38px;
+	height: 100%;
+	background-image: url(./img/border_bottom_corner.png);
+}
+
+.disclaimer {
+	position: absolute;
+	bottom: 0;
+	left: calc((100% - 1000px) / 2);
+	width: 1000px;
+	height: 32px;
+	text-align: center;
+	font-size: 10px;
+}
+
+.disclaimer a {
+	text-decoration: underline;
+	color: #ffffc8 !important;
+}
+
+.control-bar {
+	position: absolute;
+	top: 37px;
+	left: 0;
+	width:  calc(100% - 300px);
+	height: 50px;
+	/*background-color: blue;*/
+	border-bottom: 1px solid #666;
+	/*background-image: url(./img/header.png);*/
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.map {
+	width: 100%;
+	height: 100%;
+}
+
+.leaflet-container {
+	background: black !important;
+}
+
+#playPause {
+	position: absolute;
+	left: 10px;
+	background-image: url(img/button_black.png);
+	background-color: transparent;
+	border: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 33px;
+	height: 27px;
+	top: 6px;
+	font-size: 13px;
+	background-position-x: 4px;
+	color: #F9FBC5;
+}
+
+#playPause:hover {
+	background-image: url(img/button_green.png);
+}
+
+#playPause > .fa-play {
+	margin-left: 1px;
+}
+
+#speedSlider {
+	position: absolute;
+	top: 10px;
+	left: 70px;
+	width: 200px;
+}
+
+#turnSlider {
+	position: absolute;
+	width: calc(100% - 30px);
+	left: 15px;
+	top: 9px;
+}
+
+.slider {
+	border-top:    2px solid #E3D1AA;
+	border-bottom: 1px solid #856B36;
+	border-radius: 20px;
+}
+
+.slider-track {
+	height: 16px !important;
+	width: calc(100% - 2px) !important;
+	margin-top: -9px !important;
+	margin-left: 1px !important;
+	background-image: none;
+}
+
+.slider-selection, .tick-slider-selection, .slider-track-high {
+	background-color: black !important;
+	background-image: none !important;
+	border-radius: 20px;
+}
+
+.slider-tick, .slider-tick.in-selection {
+	background-color: #0e5d54 !important;
+	background-image: none;
+	width: 5px;
+	height: 5px;
+	top: 5px;
+	margin-left: -2px !important;
+	margin-top:   1px !important;
+}
+
+.slider-track-high + .slider-tick,
+.slider-tick + .slider-tick + .slider-tick + .slider-tick + .slider-tick {
+	display: none;
+}
+
+.slider-handle {
+	width: 29px;
+	height: 29px;
+	background-image: url(img/slider_handle.png);
+	border-radius: 0 !important;
+	border: none !important;
+	background-color: transparent !important;
+	margin-left: -15px !important;
+	margin-top: -7px !important;
+	box-shadow: none !important;
+}
+
+.textures {
+	display: none;
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+	background-color: #0D3630 !important;
+	color: #ffffc8 !important;
+	border: 1px solid #E3C37D !important;
+}
+
+.leaflet-control-zoom-in {
+	border-bottom: none !important;
+}
+
+.leaflet-control-layers {
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+
+.leaflet-control-layers-toggle {
+	background-image: url(img/layers.png);
+	background-size: cover;
+	width: 64;
+	height: 64;
+	background-color: rgba(12, 53, 48, 0.85);
+	border-radius: 5px;
+	border: 1px solid #E3C37D !important;
+}
+
+.leaflet-control-layers-list {
+	background: rgba(12, 53, 48, 0.85);
+	padding: 10px 10px 5px 10px;
+	border-radius: 5px;
+	border: 1px solid #E3C37D !important;
+}
+
+.leaflet-control-layers-list label {
+	color: #ffffc8;
+}

@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<link href="lib/bootstrap/css/bootstrap.min.css"               rel="stylesheet" />
+		<link href="lib/bootstrap-slider/css/bootstrap-slider.min.css" rel="stylesheet" />
+		<link href="lib/selectpicker/css/bootstrap-select.min.css"     rel="stylesheet" />
+
+		<link href="lib/leaflet/leaflet.css" rel="stylesheet" />
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<link href="index.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="textures">
+			<!-- Terrain -->
+			<img id="GRASSLAND"    src="./img/tiles/GRASSLAND.png"    crossOrigin="Anonymous">
+			<img id="PLAINS"       src="./img/tiles/PLAINS.png"       crossOrigin="Anonymous">
+			<img id="DESERT"       src="./img/tiles/DESERT.png"       crossOrigin="Anonymous">
+			<img id="TUNDRA"       src="./img/tiles/TUNDRA.png"       crossOrigin="Anonymous">
+			<img id="SNOW"         src="./img/tiles/SNOW.png"         crossOrigin="Anonymous">
+			<img id="COAST"        src="./img/tiles/COAST.png"        crossOrigin="Anonymous">
+			<img id="OCEAN"        src="./img/tiles/OCEAN.png"        crossOrigin="Anonymous">
+
+			<!-- Elevation -->
+			<img id="MOUNTAIN"     src="./img/tiles/MOUNTAIN.png"     crossOrigin="Anonymous">
+			<img id="HILLS"        src="./img/tiles/HILLS.png"        crossOrigin="Anonymous">
+
+			<!-- Features -->
+			<img id="ICE"          src="./img/tiles/ICE.png"          crossOrigin="Anonymous">
+			<img id="JUNGLE"       src="./img/tiles/JUNGLE.png"       crossOrigin="Anonymous">
+			<!-- <img id="MARSH"        src="./img/tiles/MARSH.png"        crossOrigin="Anonymous"> -->
+			<!-- <img id="OASIS"        src="./img/tiles/OASIS.png"        crossOrigin="Anonymous"> -->
+			<!-- <img id="FLOOD_PLAINS" src="./img/tiles/FLOOD_PLAINS.png" crossOrigin="Anonymous"> -->
+			<img id="FOREST"       src="./img/tiles/FOREST.png"       crossOrigin="Anonymous">
+		</div>
+
+		<div class="page-header-area">Civilization V Replay Viewer</div>
+
+		<div class="main-container">
+			<div class="top-bar">
+				<div class="top-left-corner"></div>
+
+				<div class="top-left">
+					<button id="playPause"   class="btn btn-primary"><i class="fa fa-play"></i></button>
+					<input  id="speedSlider" type="text" />
+				</div>
+
+				<div class="top-left-split"></div>
+
+				<div class="top-middle">
+					<input  id="turnSlider"  type="text" />
+				</div>
+
+				<div class="top-right-split"></div>
+
+				<div class="top-right">
+					<select id="event-select" class="selectpicker" multiple data-selected-text-format="count">
+						<option value="MESSAGE"           >Message       </option>
+						<option value="CITY_FOUNDED"      >New cities    </option>
+						<option value="CITIES_TRANSFERRED">City transfers</option>
+						<option value="CITY_RAZED"        >City razings  </option>
+						<option value="PANTHEON_SELECTED" >Pantheons     </option>
+						<option value="RELIGION_FOUNDED"  >Religions     </option>
+						<option value="TILES_CLAIMED"     >Tile claims   </option>
+					</select>
+				</div>
+
+				<div class="top-right-corner flipped"></div>
+			</div>
+
+			<div class="border left-border"></div>
+
+			<div class="map-container">
+				<div class="map"></div>
+			</div>
+
+			<div class="border split-border"></div>
+
+			<div class="log-container">
+				<ul class="log-messages"></ul>
+			</div>
+
+			<div class="border right-border flipped"></div>
+
+			<div class="bottom-border">
+				<div class="bottom-left-corner"></div>
+				<div class="bottom-left"></div>
+				<div class="bottom-middle"></div>
+				<div class="bottom-right"></div>
+				<div class="bottom-right-corner flipped"></div>
+			</div>
+		</div>
+
+		<div class="disclaimer">
+			The artwork and designs contained on this site were not created by the site owner.
+			All artwork and designs were done by
+				<a href="http://www.firaxis.com/" target="_blank">Firaxis</a>
+			and originated from their game
+				<a href="http://www.civilization5.com/&quot;&quot;" target="_blank">Civilization V</a>.
+			The site owner does not hold any rights on the art or designs. Special thanks to
+				<a href="http://www.civilopedia.info/" target="_blank">civilopedia.info</a>,
+			which is not affiliated with Firaxis but was a major source of inspiration for the
+			design of this site.
+		</div>
+
+		<!-- General -->
+		<script src="./lib/lodash.js"                                type="text/javascript"></script>
+		<script src="./lib/jquery.js"                                type="text/javascript"></script>
+		<script src="./lib/bootstrap/js/bootstrap.js"                type="text/javascript"></script>
+		<script src="./lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
+		<script src="./lib/selectpicker/js/bootstrap-select.min.js"  type="text/javascript"></script>
+
+		<!-- File parsing -->
+		<script src="./lib/jdataview.js"                             type="text/javascript"></script>
+		<script src="./lib/filereader.js"                            type="text/javascript"></script>
+
+		<!-- Mapping -->
+		<script src="./lib/leaflet/leaflet.js"                       type="text/javascript"></script>
+
+		<!-- App code -->
+		<script src="./js/CivColors.js"                              type="text/javascript"></script>
+		<script src="./js/BinaryParser.js"                           type="text/javascript"></script>
+		<script src="./js/HexLayer.js"                               type="text/javascript"></script>
+		<script src="./js/Map.js"                                    type="text/javascript"></script>
+		<script src="./js/Replay.js"                                 type="text/javascript"></script>
+		<script src="./js/ReplayViewer.js"                           type="text/javascript"></script>
+		<script src="./js/EventLog.js"                               type="text/javascript"></script>
+		<script src="./js/ControlBar.js"                             type="text/javascript"></script>
+		<script src="./js/index.js"                                  type="text/javascript"></script>
+	</body>
+</html>
