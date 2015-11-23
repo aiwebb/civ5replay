@@ -17,6 +17,14 @@ Key            | Action
 
 ## Query parameters
 
+#### turn
+
 Pass a `turn` parameter to automatically start on that turn.
 
-Pass a `file` parameter to link directly to a .Civ5Replay file hosted on Dropbox:
+#### file
+
+Pass a `file` parameter to link directly to a .Civ5Replay file hosted on Dropbox. This should be the portion of the sharing URL that is unique to the file. For example, if the sharing URL is
+
+    https://dl.dropboxusercontent.com/1/view/hrbho1q4dtro8pa/Ramesses%20II_0267%20AD-1987_42%20(9).Civ5Replay
+    
+then the `file` parameter would be `hrbho1q4dtro8pa/Ramesses%20II_0267%20AD-1987_42%20(9).Civ5Replay`.
