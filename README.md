@@ -2,6 +2,12 @@
 
 Drag a .Civ5Replay file onto the page to load a replay.
 
+http://alexwebb2.github.io/civ5replay/
+
+Demo of automatic file loading from Dropbox, starting at turn 122:
+
+http://alexwebb2.github.io/civ5replay/?file=hrbho1q4dtro8pa/Ramesses%20II_0267%20AD-1987_42%20(9).Civ5Replay&turn=177
+
 ## Keyboard shortcuts
 
 Key            | Action
