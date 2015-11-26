@@ -53,7 +53,7 @@ then the `file` parameter would be `hrbho1q4dtro8pa/Ramesses%20II_0267%20AD-1987
 - Use an icon for cities instead of a solid color
 - Better tile artwork for nicer maps all around
 - More keyboard shortcuts for toggling map layers
-- Graph the available datasets\
+- Graph the available datasets
 - Loading indicator and error notice for initial parsing
 
 Since this is entirely client side with zero dependencies to install, it's an extremely easy project to fork and play around with. Pull requests are always welcome.
