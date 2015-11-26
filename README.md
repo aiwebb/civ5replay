@@ -55,6 +55,7 @@ then the `file` parameter would be `hrbho1q4dtro8pa/Ramesses%20II_0267%20AD-1987
 - More keyboard shortcuts for toggling map layers
 - Graph the available datasets
 - Loading indicator and error notice for initial parsing
+- Fix a couple of bugs in canvas rendering
 
 Since this is entirely client side with zero dependencies to install, it's an extremely easy project to fork and play around with. Pull requests are always welcome.
 
