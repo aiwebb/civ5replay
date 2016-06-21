@@ -1,8 +1,8 @@
 # Civilization V Replay Viewer
 
-Drag a .Civ5Replay file onto the page to load a replay: http://alexwebb2.github.io/civ5replay.
+Drag a .Civ5Replay file onto the page to load a replay: http://aiwebb.github.io/civ5replay.
 
-You can also [direct link](http://alexwebb2.github.io/civ5replay/?file=hrbho1q4dtro8pa/Ramesses%20II_0267%20AD-1987_42%20(9).Civ5Replay&turn=177) a URL with a Dropbox file ID included to easily share replays with others.
+You can also [direct link](http://aiwebb.github.io/civ5replay/?file=hrbho1q4dtro8pa/Ramesses%20II_0267%20AD-1987_42%20(9).Civ5Replay&turn=177) a URL with a Dropbox file ID included to easily share replays with others.
 
 Supports Civ5Replay files created since about mid 2013, after the release of Brave New World.
 
@@ -18,7 +18,7 @@ I used [jDataView](https://github.com/jDataView/jDataView) to abstract the proce
 
 I used [Synalyze It](https://www.synalysis.net/) for OS X as my hex editor - it has a nice tagging scheme, a quick-view grid of human readable values for selected bytes, and good support for searching, jumping to various locations, and resizing the window to snap bytes into alignment. Not trying to shill for them, but I tried a dozen other products over the years before I found one with that combination of features, so credit where credit is due for producing a hex editor that doesn't have any major shortcomings.
 
-The end result was the [current JS config](https://github.com/alexwebb2/civ5replay/blob/gh-pages/js/Replay.js#L12) describing the file format.
+The end result was the [current JS config](https://github.com/aiwebb/civ5replay/blob/gh-pages/js/Replay.js#L12) describing the file format.
 
 ## Keyboard shortcuts
 
