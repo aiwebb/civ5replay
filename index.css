@@ -104,7 +104,7 @@ input[type=checkbox]:checked {
 	background-image: url(./img/header.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position-x: center;
+	background-position: center;
 	text-align: center;
 	font-size: 20px;
 }
@@ -188,7 +188,7 @@ input[type=checkbox]:checked {
 	background-image: url(./img/border_top_corner.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position-x: center;
+	background-position: center;
 }
 
 .border {
@@ -380,6 +380,7 @@ input[type=checkbox]:checked {
 	height: 27px;
 	top: 6px;
 	font-size: 13px;
+	background-position: center;
 	background-position-x: 4px;
 	color: #F9FBC5;
 }
