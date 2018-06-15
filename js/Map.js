@@ -185,12 +185,12 @@ Map.prototype.initLayers = function(tiles, events) {
 
 	// Add layer switcher
 	var overlays = {
-		Terrain:   this.layers.terrain,
-		Elevation: this.layers.elevation,
-		Feature:   this.layers.feature,
-		Territory: this.layers.territory,
-		Cities:    this.layers.city,
-		Grid:      this.layers.grid
+		Terrain:    this.layers.terrain,
+		Elevation:  this.layers.elevation,
+		Features:   this.layers.feature,
+		Territory:  this.layers.territory,
+		Cities:     this.layers.city,
+		Grid:       this.layers.grid
 	}
 
 	this.controls = {

@@ -168,7 +168,12 @@ Replay.prototype.process = function() {
 
 	// Add human-readable stuff to events
 	var cities = {}
-	this.events = _.each(this.rawData.events, (event, i) => {
+	this.events = []
+
+	_.each(this.rawData.events, (event, i) => {
+		// There may be multiple events combined into one to save space
+		var eventsToAdd = [event]
+
 		event.index = i
 		event.civ   = this.civs[event.civId] ? this.civs[event.civId].name : null
 
@@ -197,8 +202,20 @@ Replay.prototype.process = function() {
 			cities[event.x + ',' + event.y] = event.city
 		}
 		else if (event.type == 'CITY_RAZED') {
+			event.x    = event.tiles[0].x
+			event.y    = event.tiles[0].y
 			event.city = cities[event.x + ',' + event.y]
 			event.text = `${event.city.name} has been burned to the ground by ${event.civ}!`
+
+			// Mass razings are compounded into one event; we want to separate them
+			_.each(event.tiles.slice(1), tile => {
+				var eventCopy  = Object.assign({}, event)
+				eventCopy.x    = tile.x
+				eventCopy.y    = tile.y
+				eventCopy.city = cities[eventCopy.x + ',' + eventCopy.y]
+				eventCopy.text = `${eventCopy.city.name} has been burned to the ground by ${eventCopy.civ}!`
+				eventsToAdd.push(eventCopy)
+			})
 		}
 		else if (event.type == 'CITIES_TRANSFERRED') {
 			var cityNames = _.map(event.tiles, tile => {
@@ -229,6 +246,8 @@ Replay.prototype.process = function() {
 				event.text = `${event.tiles.length} tile${event.tiles.length > 1 ? 's have' : ' has'} been abandoned!`
 			}
 		}
+
+		this.events = this.events.concat(eventsToAdd)
 
 		// if (!event.text) {
 		// 	console.dir(event)
